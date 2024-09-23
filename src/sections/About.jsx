@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="mx-4 pb-14 overflow-x-hidden">
+    <div id="about" className="mx-4 pb-14 overflow-x-hidden">
       <div className="bg-blue-300/20 max-w-7xl mx-auto mt-3 space-y-2 rounded-xl p-2">
         <motion.div
           initial={{ opacity: 0, x: -100 }}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <div className="py-10 mx-4">
+    <div id="services" className="py-10 mx-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <motion.div

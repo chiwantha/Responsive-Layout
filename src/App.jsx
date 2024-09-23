@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Brands from "./sections/Brands";
+import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Testimonial from "./sections/Testimonial";
@@ -43,6 +44,7 @@ function App() {
       <Services />
       <About />
       <Testimonial />
+      <Contact />
     </div>
   );
 }

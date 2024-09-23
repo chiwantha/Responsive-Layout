@@ -2,8 +2,17 @@ import { IoIosMenu } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useScroll, useSpring } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,37 +20,71 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-950/80 ">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-blue-950/80 backdrop-blur-md">
+      <div className="fixed top-0 w-full">
+        <motion.div
+          className="progress-bar bg-gradient-to-r from-pink-500 via-purple-500 to-red-500 blur-sm h-2 z-51 rounded-full"
+          style={{
+            scaleX,
+            transformOrigin: "0%", // Ensures scaling happens from the left (0%) to the right (100%)
+          }}
+        />
+      </div>
       <div className="mx-4">
-        <div className="max-w-7xl backdrop-blur-md mx-auto rounded-xl py-5 px-0">
+        <div className="max-w-7xl mx-auto py-5 px-0">
           <div className="flex justify-between items-center">
-            <h1 className="text-center text-4xl ktext">NAVBAR</h1>
+            <Link
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="text-center text-4xl ktext cursor-pointer"
+            >
+              NAVBAR
+            </Link>
 
             <div className="hidden md:flex items-center justify-center gap-5 text-xl text-neutral-400">
-              <a
-                className="hover:text-neutral-300 hover:ml-2 hover:border-b border-neutral-300"
-                href="#"
+              <Link
+                to="hero"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
               >
                 Home
-              </a>
-              <a
-                className="hover:text-neutral-300 hover:ml-2 hover:border-b border-neutral-300"
-                href="#"
+              </Link>
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
               >
                 Services
-              </a>
-              <a
-                className="hover:text-neutral-300 hover:ml-2 hover:border-b border-neutral-300"
-                href="#"
+              </Link>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
               >
                 About
-              </a>
-              <a
-                className="hover:text-neutral-300 hover:ml-2 hover:border-b border-neutral-300"
-                href="#"
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-130}
+                duration={500}
+                className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             <button
@@ -74,48 +117,68 @@ const Navbar = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: 0.2 }}
                 >
-                  <a
-                    className="hover:text-neutral-400 hover:ml-2 hover:border-b border-neutral-400"
-                    href="#"
+                  <Link
+                    to="hero"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
+                    onClick={toggleMenu}
                   >
                     Home
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: 0.3 }}
                 >
-                  <a
-                    className="hover:text-neutral-400 hover:ml-2 hover:border-b border-neutral-400"
-                    href="#"
+                  <Link
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
+                    onClick={toggleMenu}
                   >
                     Services
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: 0.4 }}
                 >
-                  <a
-                    className="hover:text-neutral-400 hover:ml-2 hover:border-b border-neutral-400"
-                    href="#"
+                  <Link
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-110}
+                    duration={500}
+                    className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
+                    onClick={toggleMenu}
                   >
                     About
-                  </a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: 0.5 }}
                 >
-                  <a
-                    className="hover:text-neutral-400 hover:ml-2 hover:border-b border-neutral-400"
-                    href="#"
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-130}
+                    duration={500}
+                    className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
+                    onClick={toggleMenu}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </motion.li>
               </ul>
             </div>
