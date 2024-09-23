@@ -3,8 +3,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 m-4">
       <div
         className="max-w-7xl bg-purple-400/60 backdrop-blur-md mx-auto rounded-xl
-      py-10 px-4 border border-neutral-800"
-      ></div>
+      py-5 px-4 border border-neutral-800"
+      >
+        <div className="flex justify-center items-center">
+          <h1 className="text-center text-4xl ktext">NAVBAR</h1>
+        </div>
+      </div>
     </nav>
   );
 };
