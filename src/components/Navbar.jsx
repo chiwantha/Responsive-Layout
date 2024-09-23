@@ -30,6 +30,7 @@ const Navbar = () => {
           }}
         />
       </div>
+
       <div className="mx-4">
         <div className="max-w-7xl mx-auto py-5 px-0">
           <div className="flex justify-between items-center">
@@ -161,6 +162,23 @@ const Navbar = () => {
                     onClick={toggleMenu}
                   >
                     About
+                  </Link>
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.1, delay: 0.5 }}
+                >
+                  <Link
+                    to="testimonials"
+                    spy={true}
+                    smooth={true}
+                    offset={-130}
+                    duration={500}
+                    className="hover:text-neutral-300 hover:border-b active:border-b border-neutral-300 cursor-pointer"
+                    onClick={toggleMenu}
+                  >
+                    Testimonials
                   </Link>
                 </motion.li>
                 <motion.li

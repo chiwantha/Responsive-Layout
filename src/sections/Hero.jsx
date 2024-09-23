@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div id="hero" className="mx-4 overflow-x-hidden overflow-y-hidden">
-      <div className="max-w-7xl mb-10 mt-36 mx-auto m-4">
+      <div className="max-w-7xl mb-10 mt-32 mx-auto m-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: -100 }}

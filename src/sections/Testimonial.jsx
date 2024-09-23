@@ -2,7 +2,10 @@ import TestimonialCard from "../components/TestimonialCard";
 
 const Testimonial = () => {
   return (
-    <div id="" className="overflow-x-hidden overflow-y-hidden pb-14 mx-4">
+    <div
+      id="testimonials"
+      className="overflow-x-hidden overflow-y-hidden pb-14 mx-4"
+    >
       <div className="max-w-7xl  rounded-xl space-y-6 mx-auto">
         <div className="border-cyan-500 border py-4 rounded-lg">
           <h1 className="text-center text-3xl md:text-4xl ktext">
