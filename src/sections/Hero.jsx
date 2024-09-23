@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mx-4">
+    <div className="mx-4 overflow-x-hidden overflow-y-hidden">
       <div className="max-w-7xl mb-10 mt-36 mx-auto m-4">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <motion.div
@@ -13,22 +13,22 @@ const Hero = () => {
           >
             <div className="grid grid-cols-1 mb-2 gap-2 md:grid-cols-2">
               <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 className="bg-yellow-300 py-32 rounded-lg"
               ></motion.div>
               <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 className="bg-green-500 py-32 rounded-lg"
               ></motion.div>
             </div>
             <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-red-400 py-32 rounded-lg"
             >
               <h1 className="text-center text-4xl ktext">HERO CONTENT</h1>
