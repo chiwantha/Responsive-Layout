@@ -3,6 +3,7 @@ import About from "./sections/About";
 import Brands from "./sections/Brands";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
+import Testimonial from "./sections/Testimonial";
 // import { motion, useScroll, useSpring } from "framer-motion";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Brands />
       <Services />
       <About />
+      <Testimonial />
     </div>
   );
 }

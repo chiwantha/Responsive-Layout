@@ -10,7 +10,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="bg-blue-500 py-4 rounded-lg"
         >
-          <h1 className="text-center text-4xl ktext">TITLE</h1>
+          <h1 className="text-center text-4xl ktext">ABOUT TITLE</h1>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="order-1 md:order-0 space-y-2">
