@@ -39,7 +39,7 @@ const TestimonialCard = ({ delayIn }) => {
               transition={{ duration: 0.6 }}
               className="text-white font-light text-sm"
             >
-              Designamtion / Other
+              Designation / Other
             </motion.h4>
           </div>
         </div>
